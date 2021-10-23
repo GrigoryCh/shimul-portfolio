@@ -1,0 +1,209 @@
+//===================================================================================
+.header {
+   position: fixed;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: 50;
+   background: #313536;
+   // .header__container
+
+   &__container {
+      display: flex;
+      min-height: 93px;
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+   }
+
+   // .header__label
+
+   &__label {
+      font-family: Salsa;
+      @include adaptive-value("font-size", 36, 26, 1);
+      line-height: 1.22;
+      margin-left: 10px;
+      color: #fff;
+   }
+
+   // .header__button
+
+   &__button {
+      position: relative;
+      z-index: 5;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      @include adaptive-value("padding-left", 50, 40, 1);
+      @include adaptive-value("padding-right", 50, 40, 1);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.29;
+      color: #fff;
+      background: #00E472;
+      border-radius: 10px;
+      transition: all 0.3s ease 0s;
+      min-height: 50px;
+        @media (max-width: $md3+px) {
+           width: 100%;
+        }
+      @media (any-hover: hover){
+         &:hover {
+         color: #00E472;
+         background: #fff;
+         }
+      }
+   }
+}
+.menu {
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   padding: 5px 0;// Отступы безопсности!!!!!!
+   @media (min-width: $md3+px) {
+      @include adaptive-value("padding-left", 145, 0, 1);
+      @include adaptive-value("padding-right", 54, 10, 1);
+   }
+
+   // .menu__body
+
+   &__body {
+      @media (max-width: $md3+px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+         left: -100%;// Скрыть меню
+			transition: left 0.3s ease 0s;
+			overflow: auto;
+         text-align: center;
+			padding: 90px 30px 30px;
+			background-color: #313536;
+         &::before{// Прокладка для шапки
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: 83px;// Высота шапки в этом разрешении
+				top: 0;
+				left: -100%;// Скрыть меню
+				transition: left 0.3s ease 0s;
+				background-color: #313536;
+				z-index: 2;
+			}
+			&._active{
+			   left: 0;
+            &::before{
+					left: 0;
+				}
+			}
+		}
+   }
+
+   // .menu__list
+
+   &__list {
+      @media (min-width: $md3+px) {
+         display: flex;
+         flex-wrap: wrap;
+      }
+   }
+
+   // .menu__item
+
+   &__item {
+      @media (min-width: $md3+px) {
+         &:not(:last-child) {
+            margin: 0 54px 0 0;
+         }
+      }
+        @media (max-width: $md3+px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   // .menu__link
+
+   &__link {
+      font-weight: bold;
+      font-size: 24px;
+        @media (max-width: $md3+px) {
+           font-size: 40px;
+        }
+      line-height: 1.29;
+      color: #fff;
+      position: relative;
+      &:after {
+         content: " ";
+         position: absolute;
+         width: 0;
+         height: 5px;
+         bottom: -7px;
+         border-radius: 50px;
+         left: 0%;
+         background-color: #00E472;
+         transition: all .3s ease;
+      }
+      @media (any-hover: hover){
+         &:hover {
+            color: #00E472;
+            &:after {
+               left: -17%;
+               width: 133%;
+            }
+         }
+      }
+      
+   }
+}
+
+.icon-menu { 
+	display: none;
+	@media (max-width: $md3+px) {
+   background-color: inherit;
+	display: block;
+	position: absolute;
+   top: 38px;
+	right: 10px;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+	z-index: 5;
+	span {
+		transition: all 0.3s ease 0s;
+		position: absolute;
+      top: calc(50% - 1px);
+		left: 0px;
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		&:first-child {
+			top: 0px;
+		}
+		&:last-child {
+			top: auto; 
+			bottom: 0px;
+		}
+	}
+	&._active{
+		span {
+			transform: scale(0);
+			&:first-child {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+				}
+			&:last-child {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+				}
+			}		
+		}
+	}
+}
