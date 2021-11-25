@@ -10,7 +10,7 @@
 		<div class="wrapper">
 			@@include('_header.html',{})
 			<main class="page">
-            <section class="page__main-block main-block">
+            <section class="page__main-block main-block home_goto">
                   <div class="main-block__column-left">
                      <div class="main-block__content">
                         <h1 class="main-block__title">I have lots of things to prove to myself. One is I can live my life fearlessly</h1>
@@ -27,7 +27,7 @@
                      </div>
                   </div>
             </section>
-            <section class="page__about about">
+            <section class="page__about about about_goto">
                <div class="about__container _container">
                   <div class="about__body">
                      <div class="about__image _ibg">
@@ -46,7 +46,7 @@
                   </div>
                </div>
             </section>
-            <section class="page__developer developer">
+            <section class="page__developer developer developer_goto">
                <div class="developer__container _container">
                   <div class="developer__body">
                      <div class="developer__content">
@@ -71,7 +71,7 @@
                   </div>
                </div>
             </section>
-            <section class="page__educations educations">
+            <section class="page__educations educations educations_goto">
                <div class="educations__container _container">
                   <div class="educations__content">
                      <div class="educations__header header-block">
@@ -107,8 +107,8 @@
                   </div>
                </div>
             </section>
-             <section class="page__development development">
-               <div class="development__container">
+             <section class="page__development development development_goto">
+               <div class="development__container _container">
                   <div class="development__header header-block">
                      <div class="header-block__category">More About Me</div>
                      <h2 class="header-block__title">Development</h2>
@@ -140,8 +140,8 @@
                   </div>
                </div>
              </section>
-             <div class="page__progress progress">
-                <div class="progress__container">
+             <div class="page__progress progress_goto">
+                <div class="progress__container _container">
                    <div class="progress__items">
                       <div class="progress__item">
                          <div class="progress__icon icon icon_c">
@@ -174,8 +174,8 @@
                    </div>
                 </div>
              </div>
-             <section class="page__clients clients">
-               <div class="clients__container">
+             <section class="page__clients clients clients_goto">
+               <div class="clients__container _container">
                   <div class="clients__header header-block">
                      <div class="header-block__category">What people saying</div>
                      <h2 class="header-block__title">Clients</h2>
@@ -216,23 +216,20 @@
                   </div>
                </div>
              </section>
-             <section class="page__contact contact">
-               <div class="contact__container _container">
+             <section class="page__contact contact ">
+               <div class="contact__container _container contact_goto">
                   <div class="contact__header header-block">
                      <div class="header-block__category">Just a ping Away</div>
                      <h2 class="header-block__title">Contact</h2>
                   </div>
                   <form action="#" name="main" class="contact__form form-contact">
                      <div class="form-contact__item">
-                        <label class="form-contact__label">Your Name</label>
                         <input tabindex="2" type="text" name="Name" class="form-contact__input" placeholder="Enter your name" autocomplete="off">
                      </div>
                      <div class="form-contact__item">
-                        <label class="form-contact__label">Your Email</label>
                         <input tabindex="3" type="email" required name="Email" class="form-contact__input form-contact__input_email" placeholder="Enter your email" autocomplete="off">
                      </div>
                      <div class="form-contact__item">
-                        <label class="form-contact__label">Your Message</label>
                         <textarea tabindex="1" type="text" required name="Message" class="form-contact__textarea" placeholder="Enter your message" autocomplete="off"></textarea>
                      </div>
                      <button type="submit" class="form-contact__button">Contact</button>
