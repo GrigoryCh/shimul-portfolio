@@ -218,6 +218,7 @@ body {
 //===MAIN_BLOCK========================================================================================
 .main-block {
    display: flex;
+   @include adaptive-value("margin-bottom", 70, 30, 1);
    // .main-block__column-left
 
    &__column-left {
@@ -348,7 +349,7 @@ body {
         }
       @include adaptive-value("gap", 88, 30, 1);
       padding: 70px 0 55px 0px;
-      @include adaptive-value("padding-top", 70, 30, 1);
+      
       @include adaptive-value("padding-bottom", 55, 30, 1);
    }
 
@@ -649,13 +650,13 @@ body {
    background: #313536;
    @include adaptive-value("padding-top", 96, 50, 1);
    @include adaptive-value("padding-bottom", 87, 40, 1);
-   @include adaptive-value("margin-bottom", 90, 40, 1);
+  
    // .progress__container
 
    &__container {
       max-width: 1088px;
       margin: 0 auto;
-
+      @include adaptive-value("margin-bottom", 90, 40, 1);
    }
 
    // .progress__items
@@ -778,12 +779,14 @@ body {
 
 .contact {
    background-color: #313536;
-   @include adaptive-value("padding-top", 90, 45, 1);
+   @include adaptive-value("padding-top", 90, 40, 1);
    @include adaptive-value("padding-bottom", 70, 50, 1);
   
    // .contact__header
 
    &__header {
+      position: relative;
+      z-index: 2;
       text-align: center;
       @include adaptive-value("margin-bottom", 60, 30, 1);
    }

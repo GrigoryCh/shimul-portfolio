@@ -57,8 +57,11 @@
         }
       @media (any-hover: hover){
          &:hover {
-         color: #00E472;
+         color: #00E472; 
          background: #fff;
+         &::after {
+            all:unset !important;
+         }
          }
       }
    }
