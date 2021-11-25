@@ -401,6 +401,7 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: calc(30px + 40 * ((100vw - 320px) / 1180));
 }
 
 .main-block__column-left {
@@ -488,7 +489,6 @@ body._lock {
   grid-template-columns: 1fr 1fr;
   gap: calc(30px + 58 * ((100vw - 320px) / 1180));
   padding: 70px 0 55px 0px;
-  padding-top: calc(30px + 40 * ((100vw - 320px) / 1180));
   padding-bottom: calc(30px + 25 * ((100vw - 320px) / 1180));
 }
 
@@ -674,12 +674,12 @@ body._lock {
   background: #313536;
   padding-top: calc(50px + 46 * ((100vw - 320px) / 1180));
   padding-bottom: calc(40px + 47 * ((100vw - 320px) / 1180));
-  margin-bottom: calc(40px + 50 * ((100vw - 320px) / 1180));
 }
 
 .progress__container {
   max-width: 1088px;
   margin: 0 auto;
+  margin-bottom: calc(40px + 50 * ((100vw - 320px) / 1180));
 }
 
 .progress__items {
@@ -791,11 +791,13 @@ body._lock {
 
 .contact {
   background-color: #313536;
-  padding-top: calc(45px + 45 * ((100vw - 320px) / 1180));
+  padding-top: calc(40px + 50 * ((100vw - 320px) / 1180));
   padding-bottom: calc(50px + 20 * ((100vw - 320px) / 1180));
 }
 
 .contact__header {
+  position: relative;
+  z-index: 2;
   text-align: center;
   margin-bottom: calc(30px + 30 * ((100vw - 320px) / 1180));
 }
@@ -1172,6 +1174,10 @@ body._lock {
   .header__button:hover {
     color: #00E472;
     background: #fff;
+  }
+
+  .header__button:hover::after {
+    all: unset !important;
   }
 
   .menu__link:hover {
